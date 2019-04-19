@@ -33,7 +33,7 @@ guidedSaga.run('arg1 value', 'arg2 value');
 ```
 You might run your guided saga as many times as you need. Before each run caught `error` and `dispatchState` will be reset.
 
-#### `wasActionDispatched(action: Object): boolean`
+#### `guidedSaga.wasActionDispatched(action: Object): boolean`
 Returns true, if during last run was dispatched exactly the same action with exactly the same params (compared with deep-equal) as the passed one.
 
 ```js
@@ -42,7 +42,7 @@ expect(guidedSaga.wasActionDispatched(action))
     .toBeTruthy();
 ```
 
-#### `getAllDispatchedActionsByType(type: string): Array<Object>`
+#### `guidedSaga.getAllDispatchedActionsByType(type: string): Array<Object>`
 Returns list of all dispatched actions during last run by passed action type.
 It might be useful if you have to check how many times some particular action was called.
 ```js
@@ -50,7 +50,7 @@ expect(guidedSaga.getAllDispatchedActionsByType('actionType'))
     .toHaveLength(3);
 ```
 
-#### `getDispatchStack(): Array<Object>`
+#### `guidedSaga.getDispatchStack(): Array<Object>`
 Returns list of all dispatched actions during last run in order they were dispatched.
 Could be used to debug your tests by looking on an actual dispatch stack.
 
@@ -59,7 +59,7 @@ expect(guidedSaga.getDispatchStack())
     .toHaveLength(3);
 ```
 
-#### `getError(): ?Error`
+#### `guidedSaga.getError(): ?Error`
 Returns an error that was thrown during the last run if present.
 
 ```js
@@ -75,7 +75,7 @@ expect(!!guidedSaga.getError())
     .toMatchObject({ message: 'error message' });
 ```
 
-#### `setState(state: any): void`
+#### `guidedSaga.etState(state: any): void`
 Allows you to set state which will be used to resolve `select` effect.
 ```js
 guidedSaga({ key: 'value' });
