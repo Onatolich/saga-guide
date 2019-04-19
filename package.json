@@ -1,9 +1,8 @@
 {
   "name": "saga-guide",
   "version": "0.0.0",
-  "description": "Simple saga testing utility",
+  "description": "Easy to use saga testing utility",
   "main": "src/index.js",
-  "scripts": {},
   "repository": {
     "type": "git",
     "url": "https://github.com/Onatolich/saga-guide.git"
@@ -14,5 +13,14 @@
     "util"
   ],
   "author": "Eugene Tsakh",
-  "license": "MIT"
+  "license": "MIT",
+  "peerDependencies": {
+    "redux-saga": ">=1.x"
+  },
+  "devDependencies": {
+    "redux-saga": "^1.0.2"
+  },
+  "dependencies": {
+    "deep-equal": "^1.0.1"
+  }
 }
