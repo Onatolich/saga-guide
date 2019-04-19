@@ -1,6 +1,6 @@
 {
   "name": "saga-guide",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Easy to use saga testing utility",
   "main": "src/index.js",
   "repository": {
