@@ -75,7 +75,7 @@ expect(!!guidedSaga.getError())
     .toMatchObject({ message: 'error message' });
 ```
 
-#### `guidedSaga.etState(state: any): void`
+#### `guidedSaga.getState(state: any): void`
 Allows you to set state which will be used to resolve `select` effect.
 ```js
 guidedSaga({ key: 'value' });
