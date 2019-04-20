@@ -83,13 +83,13 @@ guidedSaga.setState({ key: 'value' });
 
 ## Resolving state
 If you are using `select` effect in your sagas, then you would like to mock your redux state for testing. For this you have 2 possibilities:
-1. Define state with `getState` option during initialization
+- Define state with `getState` option during initialization
 ```js
 sagaGuide(saga, {
     getState: () => ({ key: 'value' }),
 });
 ```
-2. Define state with `guidedSaga` state management possibilities
+- Define state with `guidedSaga` state management possibilities
 ```js
 const guidedSaga = sagaGuide(saga, {
     state: { key: 'value' }, // This is optional
