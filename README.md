@@ -71,7 +71,7 @@ expect(!!guidedSaga.getError())
     .toBeTruthy();
     
 // Or
-expect(!!guidedSaga.getError())
+expect(guidedSaga.getError())
     .toMatchObject({ message: 'error message' });
 ```
 
@@ -119,7 +119,7 @@ export default function* saga(arg1) {
 }
 ```
 
-Our test will as simple as this:
+Our test will be as simple as this:
 ```js
 import sagaGuide from 'saga-guide';
 import api from '../api';
