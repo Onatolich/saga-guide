@@ -40,6 +40,13 @@ class GuidedSaga {
   }
 
   /**
+   * Returns name of guided saga.
+   */
+  getName() {
+    return this.saga.name;
+  }
+
+  /**
    * Allows to change state between different runs of saga.
    * Note: state passed via either this method or options.state will cause to ignore options.getState if it is present.
    */

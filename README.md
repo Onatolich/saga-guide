@@ -98,6 +98,18 @@ const guidedSaga = sagaGuide(saga, {
 guidedSaga.setState({ key: 'new value' });
 ```
 
+## Custom expect matchers
+###### Note: Currently we are supporting only **Jest** custom matchers
+
+#### `toDispatchAction`
+Allows you to check whether some specific action was dispatched or not. 
+```js
+expect(guidedSaga).toDispatchAction(action);
+// Equals to
+expect(guidedSaga.wasActionDispatched(action)).toBeTruthy();
+```
+However, in case of wrong assertion **toDispatchAction** matcher will tell you which actions was dispatched during the last run, so it will be easier to debug your test this way.
+
 ## Example
 
 Consider having next saga:
@@ -143,8 +155,8 @@ test('should load data from api with correct params', () => {
 });
 
 test('should dispatch success action with data loaded from api', () => {
-    expect(guidedSaga.wasActionDispatched(actions.success(responseData)))
-        .toBeTruthy();
+    expect(guidedSaga)
+        .toDispatchAction(actions.success(responseData));
 });
 
 describe('error flow', () => {
@@ -156,8 +168,8 @@ describe('error flow', () => {
     });
     
     test('should dispatch error action with error message thrown', () => {
-        expect(guidedSaga.wasActionDispatched(actions.error(error.message)))
-            .toBeTruthy();
+        expect(guidedSaga)
+              .toDispatchAction(actions.error(error.message));
     });
     
     test('should throw error further', () => {
