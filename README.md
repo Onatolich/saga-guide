@@ -21,7 +21,7 @@ const sagaGuide = require('saga-guide');
 #### `sagaGuide(saga: Function, options?: Object): guidedSaga`
 Creates guided saga instance.
 1. `saga` - a saga you want to guide
-2. `options` - an optional object of saga execution options. It should match options list of `runSaga` util of `redux-saga`. However, there is a single `saga-guide` specific option:
+2. `options` - an optional object of saga execution options. It should match options list of [runSaga](https://redux-saga.js.org/docs/api/#runsagaoptions-saga-args) util of [redux-saga](https://github.com/redux-saga/redux-saga). However, there is a single `saga-guide` specific option:
     * `state : any` - state which should be used for `select` effect.
 
 #### `guidedSaga.run(...args: Array<any>): void`
@@ -76,7 +76,7 @@ expect(guidedSaga.getError())
 ```
 
 #### `guidedSaga.setState(state: any): void`
-Allows you to set state which will be used to resolve `select` effect.
+Allows you to set state which will be used to resolve `select` effect. (See [Resolving state](#resolving-state) section)
 ```js
 guidedSaga.setState({ key: 'value' });
 ```
@@ -99,7 +99,7 @@ guidedSaga.setState({ key: 'new value' });
 ```
 
 ## Custom expect matchers
-###### Note: Currently we are supporting only **Jest** custom matchers
+###### Note: Currently we are supporting only [Jest](https://jestjs.io/) custom matchers
 
 #### `toDispatchAction`
 Allows you to check whether some specific action was dispatched or not. 
