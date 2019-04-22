@@ -57,6 +57,7 @@ All notable changes to this project will be documented in this file.
 - Ability to track errors thrown by guided saga
 - Ability to manage state for `select` effect
 
+[1.2.0]: https://github.com/Onatolich/saga-guide/compare/v1.1.1..v1.2.0
 [1.1.1]: https://github.com/Onatolich/saga-guide/compare/v1.1.0..v1.1.1
 [1.1.0]: https://github.com/Onatolich/saga-guide/compare/v1.0.7..v1.1.0
 [1.0.7]: https://github.com/Onatolich/saga-guide/compare/v1.0.6..v1.0.7
