@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [1.2.0] - 2019-04-22
+### Added
+- `toDispatchActionType` custom matcher for `Jest`
+
 ## [1.1.1] - 2019-04-22
 ### Added
 - `LICENSE.md` file with MIT license

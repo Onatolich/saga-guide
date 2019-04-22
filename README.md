@@ -110,6 +110,24 @@ expect(guidedSaga.wasActionDispatched(action)).toBeTruthy();
 ```
 However, in case of wrong assertion **toDispatchAction** matcher will tell you which actions was dispatched during the last run, so it will be easier to debug your test this way.
 
+#### `toDispatchActionType`
+Allows you to check if an action with specified type was dispatched at least once during last run.
+The difference with [toDispatchAction](#todispatchaction) matcher is that `toDispatchActionType` will check only type without any additional payload.
+
+This could be useful for `.not` assertions like:
+```js
+expect(guidedSaga).toDispatchActionType(actionTypes.type);
+expect(guidedSaga).not.toDispatchActionType(actionTypes.type);
+```
+
+Or you can pass an action instead of type. In this case matcher will automatically get passed action's type for an assertion:
+```js
+const action = { type: actionTypes.type };
+
+expect(guidedSaga).toDispatchActionType(action);
+expect(guidedSaga).not.toDispatchActionType(action);
+```
+
 ## Example
 
 Consider having next saga:
