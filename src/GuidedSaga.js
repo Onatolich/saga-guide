@@ -9,6 +9,7 @@ const deepEqual = require('deep-equal');
 class GuidedSaga {
   constructor(saga, options) {
     this.state = options.state;
+    this.result = undefined;
     this.error = undefined;
     this.dispatchStack = [];
 
@@ -98,6 +99,13 @@ class GuidedSaga {
   }
 
   /**
+   * Returns result of the last run.
+   */
+  getResult() {
+    return this.result;
+  }
+
+  /**
    * Returns an error thrown during the last run if present.
    */
   getError() {
@@ -131,7 +139,7 @@ class GuidedSaga {
     this.reset();
 
     try {
-      await runSaga(this.getRunConfig(), this.saga, ...args).done;
+      this.result = await runSaga(this.getRunConfig(), this.saga, ...args).done;
     } catch (e) {}
   }
 }

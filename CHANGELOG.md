@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [1.3.0] - 2019-05-13
+### Added
+- `getResult` method of GuidedSaga which returns a result returned during the last run
+
 ## [1.2.0] - 2019-04-22
 ### Added
 - `toDispatchActionType` custom matcher for `Jest`
@@ -57,6 +61,7 @@ All notable changes to this project will be documented in this file.
 - Ability to track errors thrown by guided saga
 - Ability to manage state for `select` effect
 
+[1.3.0]: https://github.com/Onatolich/saga-guide/compare/v1.2.0..v1.3.0
 [1.2.0]: https://github.com/Onatolich/saga-guide/compare/v1.1.1..v1.2.0
 [1.1.1]: https://github.com/Onatolich/saga-guide/compare/v1.1.0..v1.1.1
 [1.1.0]: https://github.com/Onatolich/saga-guide/compare/v1.0.7..v1.1.0

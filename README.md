@@ -59,6 +59,14 @@ expect(guidedSaga.getDispatchStack())
     .toHaveLength(3);
 ```
 
+#### `guidedSaga.getResult(): any`
+Returns a result that was returned by guided saga during the last run if present.
+
+```js
+expect(guidedSaga.getResult())
+  .toEqual('Expected return result');
+```
+
 #### `guidedSaga.getError(): ?Error`
 Returns an error that was thrown during the last run if present.
 
