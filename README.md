@@ -5,7 +5,7 @@ It provides you with everything necessary to test your saga by wrapping it in a 
 
 ## Getting started
 
-### Instalation
+### Installation
 ```sh
 npm install --save-dev saga-guide
 ```
